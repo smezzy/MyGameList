@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>fodase</title>
+    </head>
+    <body>
+        <div class="quadrado-contraste"></div>
+
+        <!--sexo-->
+        <div id="container">
+
+            <header>
+                <h1><strong>MyHentaiList</strong></h1>
+                <p>Vendo lista de <strong>Anon</strong></p>
+            </header>
+            
+            <div class="listao-container">
+                <div class="bom-dia">
+                    <div class="airi">
+                    </div>
+                </div>
+            </div>
+
+            <div class="listao-container">
+
+                <div class="content-border">
+                    <div class="list-title">
+                        <h2> TODOS OS HENTAIS </h2>
+                    </div>
+    
+                    <div class="add-hentai">
+                        <img src="add.svg">
+                    </div>
+    
+                    <div class="list-container">
+                        <div class="list-block">
+                            <table class="book-list">
+                                <tr>
+                                    <th id="hentai-id">#</th>
+                                    <th class="item-title">Hentai</th>
+                                    <th class="item-number">Score</th>
+                                    <th class="item-number">Episodes</th>
+                                    <th id="h-status">Status</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <span>Feito por SMEZZY hentai também é cultura</span>
+        </footer>
+        <!--sexo-->
+        
+        <!-- PQP ISSO ESTA MUITO RUIM -->
+        <div class="popup-shadow">
+            <div class=popup-wrapper>
+                <div class="list-input-container">
+
+                    <h2 class="popup-title">Adicionar Hentai</h2>
+
+                    <div style="position: relative">
+                        <div class="separator" style="bottom: 0"></div>
+                    </div> 
+
+                    <form class="list-input">
+                        
+                        <div class="list-items-box">
+                            <div class="flexbox-desnecessario">
+                                <label htmlFor="customerName" >Título</label>
+                                <input type="text" name="title" id="title" class="label-titulo" placeholder=""></input>
+                            </div>
+                            
+                            <div class="flexbox-desnecessario">
+                                <label htmlFor="customerName">Nota</label>
+                                <input type="number" name="score" id="score" class="label-num" min="0" max="10" placeholder=""></input>
+                            </div>
+
+                            <div class="flexbox-desnecessario">
+                                <label htmlFor="customerName">Episodios visto</label>
+                                <input type="number" name="eps" id="eps" class="label-num" placeholder="1" min="1"></input>
+                            </div>
+
+                        </div>
+                        
+                        <div style="position: relative; text-align: right;">
+                            <input type="submit" value="Adicionar" class="submitButton"></input>
+                            <div class="separator"></div> 
+                        </div>
+                        
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="library.js"></script>
+</html>
