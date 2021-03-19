@@ -25,7 +25,7 @@ function Hentai(title, score, episodes, completedStatus, index){
     this.title = title;
     this.score = score;
     this.episodes = episodes;
-    this.completed = completedStatus === true ? 'Completed' : 'Not completed';
+    this.completed = completedStatus === true ? 'Completo' : 'Incompleto';
 }
 
 //form
@@ -64,7 +64,7 @@ function addHentaiToLibrary(title, score, eps, finished){
 //VVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 function updateSelectors() {
     let titleList = document.querySelectorAll(".item-title");
-    let statusList = document.querySelectorAll("#h-status");
+    let statusList = document.querySelectorAll(".h-status");
     titleList.forEach(item => item.addEventListener("click", removeHentai))
     statusList.forEach(item => item.addEventListener("click", switchStatus))
     localStorage.setItem('hentaiList', JSON.stringify(myLibrary));
@@ -79,9 +79,7 @@ function removeHentai(e){
 
 function switchStatus(e){
     e = e || window.event;
-    let titleName = e.target.textContent;
-    myLibrary = myLibrary.filter((item) => item.title !== titleName);
-    displayLibrary();
+    e.target.textContent = e.target.textContent === "Completo" ? "Incompleto" : "Completo";  
 }
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //||||||||||||||||||||||||||||
@@ -111,6 +109,7 @@ function displayLibrary() {
             let newCell = newRow.insertCell();
             if(prop == 'title') newCell.classList.add("item-title");
             if(prop == 'score' || prop == 'completed') newCell.classList.add("item-highlight");
+            if(prop == 'completed') newCell.classList.add("h-status");
 
             let newText = document.createTextNode(item[prop]);
             newCell.appendChild(newText);

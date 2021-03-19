@@ -1,13 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
 
-    font-family: Roboto, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #353535;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2{
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+
 }
 
 strong {
@@ -36,27 +47,17 @@ strong:hover {
 
 .content-border {
     border: 1px solid #EAEAEA;
-
 }
 
 .bom-dia{
-    width: 100%;
     overflow: hidden;
 }
-.bom-dia .airi {
-    background-image: url(teste.png);
+
+.bom-dia div {
+    background-image: url(teste.jpg);
     height: 300px;
     width: 100%;
-    background-position-y: 40%;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.list-container {
-    background-color: white;
 }
 
 .list-block {
@@ -64,19 +65,12 @@ strong:hover {
 }
 
 .list-title {
-    position: relative;
     width: 100%;
-    height: 60px;
+    height: 35px;
     background-color: #B62743;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.list-title h2{
-    color: white;
-    font-weight: bolder;
-    font-size: 18px;
-
 }
 
 header {
@@ -91,32 +85,24 @@ header h1, p {
     font-weight: 400;
 }
 
-h1 {
-    font-size: 22   px;
-}
-
-
 body {
     background-image: url(bg.jpg);
     background-repeat: repeat;
-    background-position: 50%;
-    backdrop-filter: brightness(.6);
-    background-size: 70%;
+    background-attachment: fixed;
     min-height: 100%;
 }
+
 body .quadrado-contraste{
+    position: fixed;
     z-index: -1;
-    position: absolute;
-    left: 0;
     top: 0;
     background-color: #B62743;
     width: 100%;
-    height: 8%;
+    height: 11%;
 }
 
 table {
-    font-size: 14px;
-    border: transparent;
+    font-size: 12px;
     border-collapse: collapse;
     width: 100%;
 }
@@ -128,6 +114,7 @@ td, th {
 }
 
 tr .item-title {
+    font-size: 13px;
     position: relative;
     text-align: left;
     padding-left: 16px;
@@ -136,16 +123,26 @@ tr .item-title {
 td.item-title:hover::after {
     content: 'Remover';
     position: absolute;
-    margin-right: 50px;
-    right: -35px;
+    right: 15;
     top: 50%;
     transform: translateY(-50%);
     padding: 5px;
-    background-color: rgba(182, 39, 67, .9);
-    border: 2px solid #C44961;
-    border-radius: 4px;
+    background-color: #BD3C55;
     font-size: 9px;
     color: white;
+}
+
+td:first-child:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1;
+    border-left: 3px solid #276FB6;
+    height: 99%;
+}
+td:first-child {
+    position: relative;
 }
 
 tr .item-number {
@@ -159,11 +156,10 @@ td.item-title {
 td.item-highlight {
     color: #276FB6;
 }
-/*temporario favor retirar urgentemente */
+
 td.item-title:hover {
     cursor: pointer;
 }
-/*temporario favor retirar urgentemente */
 
 td {
     font-weight: bold;
@@ -173,19 +169,17 @@ td {
 th {
     background: #F3F3F3 url("bar-table-header.png") no-repeat right 7px / 1px 30px;
     padding: 14px 16px;
-    vertical-align: middle;
     
 }
 th:last-child {
     background: #F3F3F3;
     padding: 14px 16px;
-    vertical-align: middle;
     
 }
 
 .add-hentai {
     width: 100%;
-    height: 40px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,12 +188,12 @@ th:last-child {
 }
 
 .add-hentai img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 
 .add-hentai:hover {
-    opacity: .9;
+    background-color: #c22a49;
     cursor: pointer;
 }
 
@@ -209,10 +203,10 @@ th:last-child {
     height: 270px;
     background-color: white;
     box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, .323);
-    z-index: 99;
-    top: 30%;
+    z-index: 5;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,19 +215,18 @@ th:last-child {
 
 .popup-shadow {
     visibility: hidden;
-    background:rgba(0,0,0,.2);
-    display:block;
+    background:rgba(0,0,0,.3);
+    display: block;
     height:100%;
     position:fixed;
-    text-align: left;
     top:0;
     width:100%;
-    z-index:10000;
+    z-index: 5;
 }
 .popup-title {
 
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     color: #4B4F55;
 }
 
@@ -257,9 +250,8 @@ th:last-child {
     display: block;
 }
 
-.list-input input {
+.list-input input, select {
     color: #6D7176;
-    font-weight: 400;
     font-size: 14px;
     text-align: center;
     height: 30px;
@@ -267,18 +259,20 @@ th:last-child {
     background-color: #F0F3F8;
     border: 1px solid rgba(0, 0, 0, .15);
 }
+.list-input #score {
+    width: 150px;
+}
 .label-titulo{
-    width: 400px;
+    width: 300px;
 }
 .label-num{
     width: 40px;
 }
 
-.list-input .submitButton {
+.list-input .submit-button {
     background-color: #B62743;
     width: 250px;
     height: 45px;
-    align-self: center;
     margin-top: 15px;
     color: white;
     font-weight: 600;
@@ -292,7 +286,7 @@ th:last-child {
     border-bottom: 1px solid  rgba(0, 0, 0, .35);
 }
 
-.list-input .submitButton:hover {
+.list-input .submit-button:hover {
     cursor: pointer;
 }
 
@@ -300,16 +294,12 @@ th:last-child {
     width: 90%;
 }
 
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 35px;
+.footer-block {
+    padding: 15px 0;
+    text-align: center;
     background-color: #B62743;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 footer span {
     color: #DA93A1;
-    font-size: 12px;
+    font-size: 11px;
 }

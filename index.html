@@ -16,12 +16,12 @@
             
             <div class="listao-container">
                 <div class="bom-dia">
-                    <div class="airi">
-                    </div>
+                    <div></div>
                 </div>
             </div>
 
             <div class="listao-container">
+
                 <div class="content-border">
                     <div class="list-title">
                         <h2> TODOS OS HENTAIS </h2>
@@ -31,25 +31,25 @@
                         <img src="add.svg">
                     </div>
     
-                    <div class="list-container">
-                        <div class="list-block">
-                            <table class="book-list">
-                                <tr>
-                                    <th id="hentai-id">#</th>
-                                    <th class="item-title">Hentai</th>
-                                    <th class="item-number">Score</th>
-                                    <th class="item-number">Episodes</th>
-                                    <th id="h-status">Status</th>
-                                </tr>
-                            </table>
-                        </div>
+                    <div class="list-block">
+                        <table class="book-list">
+                            <tr>
+                                <th id="hentai-id">#</th>
+                                <th class="item-title">Título</th>
+                                <th class="item-number">Nota</th>
+                                <th class="item-number">Episódios</th>
+                                <th>Status</th>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
 
         <footer>
-            <span>Feito por SMEZZY hentai também é cultura</span>
+            <div class="footer-block">
+                <span>Feito por SMEZZY. Hentai é interessante</span>
+            </div>
         </footer>
         
         <!--sexo-->
@@ -75,18 +75,42 @@
                             
                             <div class="flexbox-desnecessario">
                                 <label htmlFor="customerName">Nota</label>
-                                <input type="number" name="score" id="score" class="label-num" min="0" max="10" placeholder=""></input>
+                                <select id="score" name="score" id="score" class="label-num">
+                                    <option value="">Selecionar nota</option>
+                                    <option value="10">(10) Masterpiece</option>
+                                    <option value="9">(9) Excelente</option>
+                                    <option value="8">(8) Uma delicia</option>
+                                    <option value="7">(7) Bom demais</option>
+                                    <option value="6">(6) Endureci</option>
+                                    <option value="5">(5) Mais ou menos</option>
+                                    <option value="4">(4) Ruim</option>
+                                    <option value="3">(3) Muito ruim</option>
+                                    <option value="2">(2) Horrível</option>
+                                    <option value="1">(1) Lixo</option>
+                                    <option value="0">(0) Gabriel Ribeiro</option>
+                                </select>
+                                
                             </div>
 
                             <div class="flexbox-desnecessario">
                                 <label htmlFor="customerName">Episodios visto</label>
-                                <input type="number" name="eps" id="eps" class="label-num" placeholder="1" min="1"></input>
+                                <select id="eps" name="score" id="score" class="label-num">
+                                    <option value="?"></option>
+                                    <option value="8"> 8 </option>
+                                    <option value="7"> 7 </option>
+                                    <option value="6"> 6 </option>
+                                    <option value="5"> 5 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="1"> 1 </option>
+                                </select>
                             </div>
 
                         </div>
                         
                         <div style="position: relative; text-align: right;">
-                            <input type="submit" value="Adicionar" class="submitButton"></input>
+                            <input type="submit" value="Adicionar" class="submit-button"></input>
                             <div class="separator"></div> 
                         </div>
                         
