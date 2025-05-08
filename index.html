@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <title>MyHentaiList</title>
+        <title>MyGameList</title>
     </head>
     <body>
         <div class="quadrado-contraste"></div>
@@ -10,7 +10,7 @@
         <div id="container">
 
             <header>
-                <h1><strong>MyHentaiList</strong></h1>
+                <h1><strong>MyGameList</strong></h1>
                 <p>Vendo lista de <strong>Anon</strong></p>
             </header>
             
@@ -24,20 +24,20 @@
 
                 <div class="content-border">
                     <div class="list-title">
-                        <h2> TODOS OS HENTAIS </h2>
+                        <h2> TODOS OS GAMES </h2>
                     </div>
     
-                    <div class="add-hentai">
+                    <div class="add-game">
                         <img src="add.svg">
                     </div>
     
                     <div class="list-block">
                         <table class="book-list">
                             <tr>
-                                <th id="hentai-id">#</th>
+                                <th id="game-id">#</th>
                                 <th class="item-title">Título</th>
                                 <th class="item-number">Nota</th>
-                                <th class="item-number">Episódios</th>
+                                <th class="item-number">Horas</th>
                                 <th>Status</th>
                             </tr>
                         </table>
@@ -48,7 +48,7 @@
 
         <footer>
             <div class="footer-block">
-                <span>Feito por SMEZZY. Hentai é interessante</span>
+                <span>Feito por SMEZZY. Jogos são interessante</span>
             </div>
         </footer>
         
@@ -59,7 +59,7 @@
             <div class=popup-wrapper>
                 <div class="list-input-container">
 
-                    <h2 class="popup-title">Adicionar Hentai</h2>
+                    <h2 class="popup-title">Adicionar Jogo</h2>
 
                     <div style="position: relative">
                         <div class="separator" style="bottom: 0"></div>
@@ -79,9 +79,9 @@
                                     <option value="">Selecionar nota</option>
                                     <option value="10">(10) Masterpiece</option>
                                     <option value="9">(9) Excelente</option>
-                                    <option value="8">(8) Uma delicia</option>
+                                    <option value="8">(8) Foda </option>
                                     <option value="7">(7) Bom demais</option>
-                                    <option value="6">(6) Endureci</option>
+                                    <option value="6">(6) Ok </option>
                                     <option value="5">(5) Mais ou menos</option>
                                     <option value="4">(4) Ruim</option>
                                     <option value="3">(3) Muito ruim</option>
@@ -93,17 +93,15 @@
                             </div>
 
                             <div class="flexbox-desnecessario">
-                                <label htmlFor="customerName">Episodios visto</label>
+                                <label htmlFor="customerName">Horas jogadas</label>
                                 <select id="eps" name="score" id="score" class="label-num">
                                     <option value="?"></option>
-                                    <option value="8"> 8 </option>
-                                    <option value="7"> 7 </option>
-                                    <option value="6"> 6 </option>
-                                    <option value="5"> 5 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="1"> 1 </option>
+                                    <option value="200"> 200 </option>
+                                    <option value="100"> 100 </option>
+                                    <option value="50"> 50 </option>
+                                    <option value="25"> 25 </option>
+                                    <option value="10"> 10 </option>
+                                    <option value="0"> 0 </option>
                                 </select>
                             </div>
 

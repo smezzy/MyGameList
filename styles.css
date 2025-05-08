@@ -86,7 +86,7 @@ header h1, p {
 }
 
 body {
-    background-image: url(bg.jpg);
+    background-image: url(bg.png);
     background-repeat: repeat;
     background-attachment: fixed;
     min-height: 100%;
@@ -177,7 +177,7 @@ th:last-child {
     
 }
 
-.add-hentai {
+.add-game {
     width: 100%;
     height: 30px;
     display: flex;
@@ -187,12 +187,12 @@ th:last-child {
     transition: all .2s linear;
 }
 
-.add-hentai img {
+.add-game img {
     width: 16px;
     height: 16px;
 }
 
-.add-hentai:hover {
+.add-game:hover {
     background-color: #c22a49;
     cursor: pointer;
 }

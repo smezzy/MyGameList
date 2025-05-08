@@ -1,26 +1,24 @@
 let myLibrary = [];
 
 window.onload = () => {
-    if(!localStorage.getItem("hentaiList")) {
-        localStorage.setItem("hentaiList", JSON.stringify([]));
+    if(!localStorage.getItem("gameList")) {
+        localStorage.setItem("gameList", JSON.stringify([]));
     } else {
-        myLibrary = JSON.parse(localStorage.getItem("hentaiList"));
+        myLibrary = JSON.parse(localStorage.getItem("gameList"));
         displayLibrary();
     }
 }
 
 
-
-
 const tableBody = document.querySelector(".book-list").getElementsByTagName('tbody')[0];
 const addPopup = document.querySelector(".popup-shadow");
-const addHentaiButton = document.querySelector(".add-hentai");
+const addGameButton = document.querySelector(".add-game");
 
 
-addHentaiButton.addEventListener("click", () => showPopup(true));
+addGameButton.addEventListener("click", () => showPopup(true));
 
 
-function Hentai(title, score, episodes, completedStatus, index){
+function Game(title, score, episodes, completedStatus, index){
     this.index = index;
     this.title = title;
     this.score = score;
@@ -30,24 +28,24 @@ function Hentai(title, score, episodes, completedStatus, index){
 
 //form
 const form = document.querySelector(".list-input");
-form.addEventListener("submit", addHentai);
+form.addEventListener("submit", addGame);
 
-function addHentai(e) {
+function addGame(e) {
     e.preventDefault();
-    getHentaiFromInput();
+    getGameFromInput();
 }
 
-function getHentaiFromInput() {
+function getGameFromInput() {
     let title = document.getElementById("title").value;
     let score = document.getElementById("score").value;
     let eps = document.getElementById("eps").value;
     let finished = eps > 3 ? true : false;
-    addHentaiToLibrary(title, score, eps, finished);
+    addGameToLibrary(title, score, eps, finished);
 }
 
-function addHentaiToLibrary(title, score, eps, finished){
+function addGameToLibrary(title, score, eps, finished){
     var index = myLibrary.length + 1;
-    myLibrary.push(new Hentai(title, score, eps, finished, index));
+    myLibrary.push(new Game(title, score, eps, finished, index));
     showPopup(false);
     displayLibrary();
     updateSelectors();
@@ -65,12 +63,12 @@ function addHentaiToLibrary(title, score, eps, finished){
 function updateSelectors() {
     let titleList = document.querySelectorAll(".item-title");
     let statusList = document.querySelectorAll(".h-status");
-    titleList.forEach(item => item.addEventListener("click", removeHentai))
+    titleList.forEach(item => item.addEventListener("click", removeGame))
     statusList.forEach(item => item.addEventListener("click", switchStatus))
-    localStorage.setItem('hentaiList', JSON.stringify(myLibrary));
+    localStorage.setItem('gameList', JSON.stringify(myLibrary));
 }
 
-function removeHentai(e){
+function removeGame(e){
     e = e || window.event;
     let titleName = e.target.textContent;
     myLibrary = myLibrary.filter((item) => item.title !== titleName);
